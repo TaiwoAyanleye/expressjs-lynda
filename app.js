@@ -1,4 +1,5 @@
 var express = require('express');
+<<<<<<< HEAD
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -60,3 +61,38 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+=======
+var app = express();
+
+app.set('view engine', 'ejs');
+
+app.get('/', function(req, res) {
+	res.render('default', {
+		title: 'Home',
+		users: ['Ray', 'Mortem', 'James']
+	});
+});
+
+app.get('/me', function(req, res) {
+	res.send('@planetoftheweb');
+});
+
+app.get('/who/:name?', function(req, res) {
+	var name = req.params.name;
+	res.send(name + ' was here');
+});
+
+app.get('/who/:name?/:title?', function(req, res) {
+	var name = req.params.name;
+	var title = req.params.title;
+	res.send('<p>name: ' + name + '<br>title: ' + title + '</p>');
+});
+
+app.get('*', function(req, res) {
+	res.send('Bad Route');
+});
+
+var server = app.listen(3000, function() {
+	console.log('Listening on port 3000')
+})
+>>>>>>> 78eba09a43d5c2282aad3ceef4a4a1134fb22db8

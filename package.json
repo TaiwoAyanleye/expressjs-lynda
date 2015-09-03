@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "bustransys",
   "version": "0.0.0",
   "private": true,
@@ -16,4 +17,21 @@
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
   }
+=======
+  "name": "express_hello",
+  "version": "1.0.0",
+  "description": "Some description of my app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "t",
+  "dependencies": {
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {},
+  "license": "ISC"
+>>>>>>> 78eba09a43d5c2282aad3ceef4a4a1134fb22db8
 }
